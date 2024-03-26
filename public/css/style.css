@@ -39,6 +39,11 @@ a {
 	border-radius: 5px;
 }
 
+input {
+	border: none;
+	border: 2px green solid;
+}
+
 /* Chat Page */
 
 .chat-container {

@@ -54,3 +54,13 @@ function outputMessage(message) {
     </p>`;
     document.querySelector('.chat-messages').appendChild(div);
 }
+
+function outputRoomName(room) {
+    roomName.innerText = room;
+}
+
+function outputUsers(users) {
+    userList.innerHTML = `
+    ${users.map(user => `<li>${user.username}</li>`).join('')}`;
+}
+

@@ -1,6 +1,8 @@
  const chatForm = document.getElementById('chat-form');
  const chatMessages = document.querySelector('.chat-messages');
  const sideMenuBar = document.querySelector(".chat-sidebar");
+ const roomName = document.getElementById('room-name');
+ const userList = document.getElementById('users');
 
  function openSidebar(){
     sideMenuBar.style.display = "flex";
@@ -9,7 +11,21 @@
  function closeSideBar(){
     sideMenuBar.style.display = "none";
  }
+
+const { username, room } = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+});
+
+console.log(username, room)
+
 const socket = io();
+
+socket.emit('joinRoom', { username, room });
+
+socket.on('roomUsers', ({ room, users }) => {
+    outputRoomName(room);
+    outputUsers(users);
+});
 
 socket.on('message', message => {
     console.log(message)

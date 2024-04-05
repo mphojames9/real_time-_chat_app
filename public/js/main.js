@@ -5,11 +5,13 @@
  const userList = document.getElementById('users');
 
  function openSidebar(){
-    sideMenuBar.style.display = "flex";
+    sideMenuBar.style.width = "280px";
+    console.log("open");
  }
 
  function closeSideBar(){
-    sideMenuBar.style.display = "none";
+    sideMenuBar.style.width = "0px";
+    console.log("close");
  }
 
 const { username, room } = Qs.parse(location.search, {
@@ -48,7 +50,7 @@ chatForm.addEventListener('submit', (e) => {
 function outputMessage(message) {
     const div = document.createElement('div');
     div.classList.add('message');
-    div.innerHTML = `<p class="meta">${message.username}<span>${message.time}</span></p>
+    div.innerHTML = `<p class="meta">${message.username}<span> ${message.time}</span></p>
     <p class="text">
         ${message.text}
     </p>`;

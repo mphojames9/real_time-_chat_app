@@ -10,7 +10,7 @@ An intuitive User Interface was built using ReactJS and serves as the project's 
 
 The Socket.IO library was used for the real-time communication functionality between the project's client and server.
 
-- Project's Live Preview url - [!https://img.shields.io/badge/Live_Demo-Click_here-blue](https://your-app-url.com)
+- See it in Action: [Live Preview](https://real-time-chat-app-ucv3.onrender.com)
 
 ## Homepage
 

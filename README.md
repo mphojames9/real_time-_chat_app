@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Messaging App Project
 
 [![fr](https://img.shields.io/badge/lang-fr-blue)](README.fr.md)
@@ -38,3 +39,6 @@ The Socket.IO library was used for the real-time communication functionality bet
 - Integration with RESTful backend API
 - Intuitive User Interface
 - Fully Responsive User Interface
+=======
+
+>>>>>>> b10de3686575e8de519261f21dfb78e90e02058e
